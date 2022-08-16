@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>CRUD IRWYNG</header>
+    <main>
+        <div class="clientsSpace">
+            <input type="button" value="CADASTRAR USUÁRIO" id="btnOpenRegisterModal">
+            <table id="tableClient">
+                <thead>
+                    <tr>
+                        <th class="nameColumnTitle">Nome</th>
+                        <th class="nameColumnTitle">E-mail</th>
+                        <th class="nameColumnTitle">Celular</th>
+                        <th class="nameColumnTitle">Cidade</th>
+                        <th class="nameColumnTitle">Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="addUsuarios">
+                </tbody>
+            </table>
+        </div>
+        <div id="appearModal" class="backgroundToModalHidden">
+            <div id="appearForm" class="modalSubmitHidden">
+                <input type="button" id="btnCloseModal" value="X">
+                <form action="index.html" id="form">
+                    <input type="text" name="id" id="saveOrEdit" value="" hidden />
+                    <label for="nameClient">Nome</label>
+                    <input required type="text" name="nome" id="nameClient" class="clearFields" />
+
+                    <label for="emailClient">E-mail</label>
+                    <input required type="email" name="email" id="emailClient" class="clearFields" />
+
+                    <label for="celularClient">Celular</label>
+                    <input required type="number" name="celular" id="celularClient" class="clearFields" />
+
+                    <label for="cidadeClient">Cidade</label>
+                    <input required type="text" name="cidade" id="cityClient" class="clearFields" />
+                    <button id="btnSaveRegister" type="submit">Salvar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>COPYRIGHT IRWYNG</footer>
+</body>
+<script src="index.js"></script>
+</html>
